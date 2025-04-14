@@ -1,0 +1,122 @@
+%% The MIT License (MIT)
+%%
+%% Copyright (c) 2015 Daniil Belyakov
+%%
+%% Permission is hereby granted, free of charge, to any person obtaining a copy
+%% of this software and associated documentation files (the "Software"), to deal
+%% in the Software without restriction, including without limitation the rights
+%% to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+%% copies of the Software, and to permit persons to whom the Software is
+%% furnished to do so, subject to the following conditions:
+%%
+%% The above copyright notice and this permission notice shall be included in all
+%% copies or substantial portions of the Software.
+%%
+%% THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+%% IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+%% FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+%% AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+%% LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+%% OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+%% SOFTWARE.
+
+% The font could be set to Windows-specific Calibri by using the 'calibri' option
+\documentclass[]{mcdowellcv}
+
+\makeatletter
+\renewenvironment{cvsubsection}[2]{%
+  \begin{adjustwidth}{\subsectionmargin}{\subsectionmargin}%
+    {\bfseries #1}\hfill #2\par\vspace{0.5em}%
+}{%
+  \end{adjustwidth}%
+  \vspace*{\aftersubsectionspace}%
+}
+\renewcommand{\makeheader}{%
+  \begin{center}
+    \printname\\[0.5em]%
+    \printcontacts%
+  \end{center}%
+  \vspace*{\afterheaderspace}%
+}
+\makeatother
+
+
+% For mathematical symbols
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{setspace}
+
+% Увеличиваем межстрочный интервал
+\linespread{1.13}\selectfont
+%\onehalfspacing
+
+% Меняем интервал между абзацами (если нужно)
+\setlength{\parskip}{0.5em}
+
+
+% Set applicant's personal data for header
+\name{\huge Renat Yunisov}
+% \contacts{+7(977)285-32-86 \linebreak ryunisov0@gmail.com \linebreak @rryunisov}
+\contacts{ryunisov0@gmail.com \hspace{2em} \quad \href{https://t.me/rryunisov}{@rryunisov (Telegram)} \hspace{2em} \quad \href{https://www.linkedin.com/in/renat-yunisov-m02/}{Linkedin} \hspace{2em} \quad \href{https://github.com/Renarion}{GitHub}}
+
+
+\begin{document}
+
+	% Print the header
+	\makeheader
+	
+	% Print the content
+	\begin{cvsection}{\Large Work Experience}
+		\begin{cvsubsection}{inDrive, Product Analyst}{September 2024 -- Present}
+			\begin{itemize}
+				\item Conducted a study of related user accounts that experienced incidents, which enabled the development of automatic bans and reduced the number of repeat incidents by approximately \textbf{\textasciitilde 15\%} in Latin America;
+				\item Performed calculations for launching a monitoring system during trips, which evaluates the occurrence of incidents based on 20 parameters, and also initiated the development of an accelerometer (G-sensor), which impacted DSAT/CSAT and helped detect up to \textbf{5\%} of incidents during trips;
+				\item Launched 15 experiments and developed a library for A/B testing using Python, which reduced the time for compiling results by approximately \textbf{\textasciitilde 30\%} (\href{https://github.com/Renarion/expab}{GitHub}).
+			\end{itemize}
+		\end{cvsubsection}
+		
+		\begin{cvsubsection}{InvestEngine, Product Analyst}{March 2024 -- August 2024}
+			\begin{itemize}
+				\item Created and prepared automated reporting in Slack, and set up reporting via Data Looker to monitor key client events;
+				\item Developed a framework with over 25 product metrics that became the basis for the operational team's KPIs.
+			\end{itemize}
+		\end{cvsubsection}
+		
+		\begin{cvsubsection}{Tinkoff (T-Bank), Product Analyst}{March 2023 -- March 2024}		
+			\begin{itemize}
+				\item Conducted a study and launched an experiment to implement a new process for handling applications for establishing individual entrepreneurship, which helped increase the utilization CR by approximately \textbf{\textasciitilde 11\%} and generated over \textbf{1 mln. RUB} in revenue;
+				\item Identified the cause of increased churn rate for debit (business) cards and assisted in developing marketing campaigns that reduced this metric by approximately \textbf{\textasciitilde 3\%};
+				\item Developed 5 reports in Tableau and Apache Superset (using JSON and CSS).
+			\end{itemize}
+		\end{cvsubsection}
+		
+		\begin{cvsubsection}{Ozon, Data Analyst}{August 2021 -- March 2023}
+			\begin{itemize}
+				\item Based on data from the advertising dashboard, created a report on bids and key queries; this helped effectively optimize advertising and increase ROMI by approximately \textbf{\textasciitilde 10\%};
+				\item Implemented an investment return forecast based on historical data within a category segmented by paid and organic traffic, taking into account all possible sales placements; this helped attract over \textbf{2.5 mln. RUB} in investments.
+			\end{itemize}
+		\end{cvsubsection}
+	\end{cvsection}
+	
+	\begin{cvsection}{\Large Education}
+		\begin{cvsubsection}{Higher School of Economics, Faculty of Computer Science, Continuing Education}{2023 -- 2024}
+			\begin{itemize}
+				\item Mathematics for Data Science (calculus, discrete mathematics, probability theory).
+			\end{itemize}
+		\end{cvsubsection}
+		\begin{cvsubsection}{Financial University, Faculty of Technology and Data Analysis}{2021 -- 2027}
+			\begin{itemize}
+				\item Information Technology and Systems in Finance (algorithm theory, cryptography, machine learning, analytic geometry, linear algebra, programming).
+			\end{itemize}
+		\end{cvsubsection}
+	\end{cvsection}
+	
+	\begin{cvsection}{\Large Skills}
+		\begin{cvsubsection}{}{}{}	
+			\begin{itemize}
+				\item Python \textit{(Pandas, Plotly, NetworkX, Scikit-learn, Scipy.stats)}; SQL \textit{(BigQuery, Greenplum, PostgreSQL)}; Airflow; GitHub; BI \textit{(Tableau, Superset)}; Figma; Jira \textit{(Atlassian)}. 
+			\end{itemize}
+		\end{cvsubsection}
+	\end{cvsection}
+	
+\end{document}
